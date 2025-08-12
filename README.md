@@ -13,8 +13,8 @@
 
 | No. | ダウンロードリンク | 説明                               |
 | :-- | :----------------- | :--------------------------------- |
-| 1   | LinkA              | ・.NET8.0環境が入っているユーザー向け<br>・アプリの最小限の構成のみ |
-| 2   | LinkB              | ・.NET環境が入っていないユーザー向け<br>・アプリの中に必要な動作要件を含むためサイズが大きい |
+| 1   | [Link](https://github.com/simon-mog/sunset-ct-comment/raw/main/downloads/SunSetCTComment_dotNET%E6%A7%8B%E7%AF%89%E6%B8%88%E3%81%BF%E7%92%B0%E5%A2%83%E5%90%91%E3%81%91.zip) | ・.NET8.0環境が入っているユーザー向け<br>・アプリの最小限の構成のみ |
+| 2   | [Link](https://github.com/simon-mog/sunset-ct-comment/raw/main/downloads/SunSetCTComment_dotNET%E8%BE%BC%E3%81%BF.zip) | ・.NET環境が入っていないユーザー向け<br>・アプリの中に必要な動作要件を含むためサイズが大きい |
 
 ## 使い方
 
