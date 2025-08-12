@@ -24,6 +24,8 @@ namespace SunSetCTCommentClipBoard
         private double _originalWindowWidth;
         private double _originalWindowHeight;
 
+        private Brush _originalButtonBackground;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -33,6 +35,7 @@ namespace SunSetCTCommentClipBoard
             _originalCursor = this.Cursor;
             _originalBorderBrush = this.BorderBrush;
             _originalThickness = this.BorderThickness;
+            _originalButtonBackground = this.CopyButton180.Background; //代表して180ボタン
         }
 
         /// <summary>
@@ -47,7 +50,7 @@ namespace SunSetCTCommentClipBoard
         /// グル1、撃破
         /// </summary>
         /// <param name="group"></param>
-        private void InsertCopiedStr(string mode)
+        private bool InsertCopiedStr(string mode)
         {
             var formatDictionary = new Dictionary<string, string>
             {
@@ -65,63 +68,101 @@ namespace SunSetCTCommentClipBoard
             if (GroupComboBox.SelectedItem == null)
             {
                 MessageBox.Show("グループを選択してください");
-                return;
+                return false;
             }
             if (int.TryParse(GroupComboBox.Text, out int group))
             {
                 string copied = string.Format(formatDictionary[mode], group);
                 Clipboard.SetText(copied);
                 CopiedStringsListBox.Items.Insert(0, copied);
+
+                CopyButton180.Background = _originalButtonBackground;
+                CopyButton120.Background = _originalButtonBackground;
+                CopyButton60.Background = _originalButtonBackground;
+                CopyButton30.Background = _originalButtonBackground;
+                CopyButton15.Background = _originalButtonBackground;
+                CopyButtonIn.Background = _originalButtonBackground;
+                CopyButtonPause.Background = _originalButtonBackground;
+                CopyButtonResume.Background = _originalButtonBackground;
+                CopyButtonDefeat.Background = _originalButtonBackground;
+
+                return true;
             }
-            else
-            {
-                MessageBox.Show(nameof(GroupComboBox) + " ERROR");
-            }
+
+            MessageBox.Show(nameof(GroupComboBox) + " ERROR");
+            return false;
         }
 
         private void Copy180Button_Click(object sender, RoutedEventArgs e)
         {
-            InsertCopiedStr("180");
+            if (InsertCopiedStr("180"))
+            {
+                CopyButton180.Background = Brushes.LightYellow;
+            }
         }
 
         private void Copy120Button_Click(object sender, RoutedEventArgs e)
         {
-            InsertCopiedStr("120");
+            if (InsertCopiedStr("120"))
+            {
+                CopyButton120.Background = Brushes.LightYellow;
+            }
         }
 
         private void Copy60Button_Click(object sender, RoutedEventArgs e)
         {
-            InsertCopiedStr("60");
+            if (InsertCopiedStr("60"))
+            {
+                CopyButton60.Background = Brushes.LightYellow;
+            }
         }
 
         private void Copy30Button_Click(object sender, RoutedEventArgs e)
         {
-            InsertCopiedStr("30");
+            if (InsertCopiedStr("30"))
+            {
+                CopyButton30.Background = Brushes.LightYellow;
+            }
         }
 
         private void Copy15Button_Click(object sender, RoutedEventArgs e)
         {
-            InsertCopiedStr("15");
+            if (InsertCopiedStr("15"))
+            {
+                CopyButton15.Background = Brushes.LightYellow;
+            }
         }
 
         private void CopyInButton_Click(object sender, RoutedEventArgs e)
         {
-            InsertCopiedStr("in");
+            if (InsertCopiedStr("in"))
+            {
+                CopyButtonIn.Background = Brushes.LightYellow;
+            }
         }
 
         private void CopyPauseButton_Click(object sender, RoutedEventArgs e)
         {
-            InsertCopiedStr("pause");
+            if (InsertCopiedStr("pause"))
+            {
+                CopyButtonPause.Background = Brushes.LightYellow;
+            }
         }
 
         private void CopyResumeButton_Click(object sender, RoutedEventArgs e)
         {
-            InsertCopiedStr("resume");
+            if (InsertCopiedStr("resume"))
+            {
+                CopyButtonResume.Background = Brushes.LightYellow;
+            }
         }
 
         private void CopyDefeatButton_Click(object sender, RoutedEventArgs e)
         {
-            InsertCopiedStr("defeat");
+            if (InsertCopiedStr("defeat"))
+            {
+                CopyButtonDefeat.Background = Brushes.LightYellow;
+            }
         }
 
         private void MyTextBox_LostFocus(object sender, RoutedEventArgs e)

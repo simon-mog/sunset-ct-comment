@@ -75,11 +75,11 @@
                 <TextBlock Grid.Row="0" Grid.Column="2" Margin="5,1" Text="1:00"/>
                 <TextBlock Grid.Row="0" Grid.Column="3" Margin="5,1" Text="0:30"/>
                 <TextBlock Grid.Row="0" Grid.Column="4" Margin="5,1" Text="0:15"/>
-                <Button Grid.Row="1" Grid.Column="0" Content="コピー" Height="30" Margin="5,1" Click="Copy180Button_Click"/>
-                <Button Grid.Row="1" Grid.Column="1" Content="コピー" Height="30" Margin="5,1" Click="Copy120Button_Click"/>
-                <Button Grid.Row="1" Grid.Column="2" Content="コピー" Height="30" Margin="5,1" Click="Copy60Button_Click"/>
-                <Button Grid.Row="1" Grid.Column="3" Content="コピー" Height="30" Margin="5,1" Click="Copy30Button_Click"/>
-                <Button Grid.Row="1" Grid.Column="4" Content="コピー" Height="30" Margin="5,1" Click="Copy15Button_Click"/>
+                <Button Name="CopyButton180" Grid.Row="1" Grid.Column="0" Content="コピー" Height="30" Margin="5,1" Click="Copy180Button_Click"/>
+                <Button Name="CopyButton120" Grid.Row="1" Grid.Column="1" Content="コピー" Height="30" Margin="5,1" Click="Copy120Button_Click"/>
+                <Button Name="CopyButton60"  Grid.Row="1" Grid.Column="2" Content="コピー" Height="30" Margin="5,1" Click="Copy60Button_Click"/>
+                <Button Name="CopyButton30"  Grid.Row="1" Grid.Column="3" Content="コピー" Height="30" Margin="5,1" Click="Copy30Button_Click"/>
+                <Button Name="CopyButton15"  Grid.Row="1" Grid.Column="4" Content="コピー" Height="30" Margin="5,1" Click="Copy15Button_Click"/>
             </Grid>
             <Grid Margin="5,5,5,15">
                 <Grid.ColumnDefinitions>
@@ -96,10 +96,10 @@
                 <TextBlock Grid.Row="0" Grid.Column="1" Margin="5,1" Text="in後待機"/>
                 <TextBlock Grid.Row="0" Grid.Column="2" Margin="5,1" Text="再開"/>
                 <TextBlock Grid.Row="0" Grid.Column="3" Margin="5,1" Text="撃破"/>
-                <Button Grid.Row="1" Grid.Column="0" Content="コピー" Height="30" Margin="5,1" Click="CopyInButton_Click"/>
-                <Button Grid.Row="1" Grid.Column="1" Content="コピー" Height="30" Margin="5,1" Click="CopyPauseButton_Click"/>
-                <Button Grid.Row="1" Grid.Column="2" Content="コピー" Height="30" Margin="5,1" Click="CopyResumeButton_Click"/>
-                <Button Grid.Row="1" Grid.Column="3" Content="コピー" Height="30" Margin="5,1" Click="CopyDefeatButton_Click"/>
+                <Button Name="CopyButtonIn"     Grid.Row="1" Grid.Column="0" Content="コピー" Height="30" Margin="5,1" Click="CopyInButton_Click"/>
+                <Button Name="CopyButtonPause"  Grid.Row="1" Grid.Column="1" Content="コピー" Height="30" Margin="5,1" Click="CopyPauseButton_Click"/>
+                <Button Name="CopyButtonResume" Grid.Row="1" Grid.Column="2" Content="コピー" Height="30" Margin="5,1" Click="CopyResumeButton_Click"/>
+                <Button Name="CopyButtonDefeat" Grid.Row="1" Grid.Column="3" Content="コピー" Height="30" Margin="5,1" Click="CopyDefeatButton_Click"/>
             </Grid>
         </StackPanel>
         <StackPanel Name="CopyCheckStackPanel">
