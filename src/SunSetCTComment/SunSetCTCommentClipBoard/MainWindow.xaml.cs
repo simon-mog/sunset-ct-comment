@@ -185,6 +185,8 @@ namespace SunSetCTCommentClipBoard
             this.Cursor = Cursors.SizeAll;
             this.BorderBrush = Brushes.LightSalmon;
             this.BorderThickness = new Thickness(2);
+            this.Topmost = true;
+
             this.CopyCheckStackPanel.Visibility = Visibility.Collapsed;
         }
         private void SimpleModeCheckBox_Unchecked(object sender, RoutedEventArgs e)
@@ -198,6 +200,7 @@ namespace SunSetCTCommentClipBoard
             
             this.Width = this._originalWindowWidth;
             this.Height = this._originalWindowHeight;
+            this.Topmost = false;
 
             this.CopyCheckStackPanel.Visibility = Visibility.Visible;
         }
