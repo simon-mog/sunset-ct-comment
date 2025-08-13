@@ -41,6 +41,6 @@
     * ボタン、プルダウン、チェックボックスは反応しません
   * チェックを外すと元のウィンドウに戻ります
 
-## Lisence
+## License
 
 * [LICENSE](https://github.com/simon-mog/sunset-ct-comment/blob/main/LICENSE)を参照
