@@ -36,11 +36,11 @@
   <img width="326" height="180" alt="image" src="https://github.com/user-attachments/assets/a9e71121-78aa-4ce4-bd8f-486f712bd033" />
 
   * 「コピーした文字列確認用」「コピーした文字列 (上が最新)」は隠れます
+  * 常に最前面に表示されます
   * 大体の部分をドラッグ&ドロップするとウィンドウを移動できます
     * ボタン、プルダウン、チェックボックスは反応しません
   * チェックを外すと元のウィンドウに戻ります
 
 ## Lisence
-
 
 * [LICENSE](https://github.com/simon-mog/sunset-ct-comment/blob/main/LICENSE)を参照
